@@ -1,0 +1,250 @@
+body {
+    font-family: "Lato", sans-serif;
+    background-color: #d7d7d7;
+    padding: 1em;
+}
+
+h1, h2, .sub-title {
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 3px;
+}
+
+h1, h2, h3, .sub-title {
+    text-transform: uppercase;
+}
+
+h1 {
+    line-height: 1.2em;
+    font-size: 2em;
+}
+
+p {
+    line-height: 1.2em;
+}
+
+h2 {
+    display: inline-block;
+    margin-bottom: 0.8em;
+    position: relative;
+}
+
+h2::before {
+    content: "";
+    width: 20px;
+    height: 5px;
+    background-color: #289bba;
+    position: absolute;
+    right: -1em;
+    bottom: 0.3em;
+}
+
+.resume {
+    width: 90%; 
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #289bba;
+    padding-left: 10px;
+}
+
+.profile-img {
+    min-height: 35em;   
+    position: relative;
+}
+
+.profile-img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title {
+    background-color: #fff; 
+    color: #111;
+    padding: 2em;
+    display: flex;
+    align-items: center;
+}
+
+.title h1:first-child {
+    font-weight: 400;
+}
+
+.separator {
+    width: 11em;
+    height: 5px;
+    background-color: #289bba;
+    margin: 2em 0;
+}
+
+.sub-title {
+    color: #5b5b5b;
+}
+
+.details {
+    color: #f2f2f2;
+}
+
+.col-1 {
+    background-color: #292935;
+}
+
+.col-2 {
+    background-color: #22222e;
+}
+
+.col-1 > div, .col-2 > div {
+    padding: 1.5em;
+}
+
+.contact > div:not(:last-child),
+.experience > div:not(:last-child) {
+    margin-bottom: 2em;
+}
+
+.hobbies > div {
+    display: flex;
+    gap: 1.5em;
+    flex-wrap: wrap;
+}
+
+.hobby {
+    width: 3em;
+    height: 3em;
+    border: 2px #289bba solid;
+    background-color: #289bba;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.education > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+}
+
+.experience p span {
+    padding: 0.1em 0.3em;
+    margin-top: 3%;
+    background-color: #289bba;
+    color: #111;
+    border-radius: 3px;
+    margin-right: 0.5em;
+}
+
+.education p:nth-child(2) {
+    margin-block: 0.3em;
+}
+
+.experience p:nth-child(2) {
+    margin-block: 0.7em; 
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    background-color: #289bba;
+    color: #fff;
+    padding: 17px 24px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+svg {
+    stroke: #289bba;
+    stroke-width: 10;
+    fill: none;
+}
+
+.progress {
+    stroke-dasharray: 314; 
+    transition: stroke-dashoffset 0.3s;
+}
+
+.circle {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+}
+
+.circle p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.2;
+}
+
+.hidden {
+    display: none;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .details {
+        grid-template-columns: 1fr;
+    }
+
+    .education > div {
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .hobby {
+        width: 2.5em;
+        height: 2.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .resume {
+        padding-left: 5px;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px 0;
+    }
+}
