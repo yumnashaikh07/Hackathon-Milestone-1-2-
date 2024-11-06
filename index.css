@@ -3,7 +3,10 @@ body {
     background-color: #d7d7d7;
     padding: 1em;
 }
-
+.name{
+    display: flex;
+    flex-direction: column;
+}
 h1, h2, .sub-title {
     font-family: "Oswald", sans-serif;
     letter-spacing: 3px;
@@ -32,7 +35,7 @@ h2::before {
     content: "";
     width: 20px;
     height: 5px;
-    background-color: #289bba;
+    background-color: #ba286a;
     position: absolute;
     right: -1em;
     bottom: 0.3em;
@@ -42,7 +45,7 @@ h2::before {
     width: 90%; 
     max-width: 1100px;
     margin: 0 auto;
-    background-color: #289bba;
+    background-color: #ba286a;
     padding-left: 10px;
 }
 
@@ -67,6 +70,7 @@ h2::before {
     padding: 2em;
     display: flex;
     align-items: center;
+    font-weight: bold;
 }
 
 .title h1:first-child {
@@ -75,13 +79,13 @@ h2::before {
 
 .separator {
     width: 11em;
-    height: 5px;
-    background-color: #289bba;
-    margin: 2em 0;
+    height: 7px;
+    background-color: #ba286a;
 }
 
 .sub-title {
     color: #5b5b5b;
+    font-size: larger;
 }
 
 .details {
@@ -100,10 +104,6 @@ h2::before {
     padding: 1.5em;
 }
 
-.contact > div:not(:last-child),
-.experience > div:not(:last-child) {
-    margin-bottom: 2em;
-}
 
 .hobbies > div {
     display: flex;
@@ -114,12 +114,21 @@ h2::before {
 .hobby {
     width: 3em;
     height: 3em;
-    border: 2px #289bba solid;
-    background-color: #289bba;
+    border: 2px  #ba286a solid;
+    background-color: #ba286a;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.education p span {
+    padding: 0.1em 0.3em;
+    margin-top: 3%;
+    background-color:  #ba286a;
+    color: #111;
+    border-radius: 3px;
+    margin-right: 0.5em;
 }
 
 .education > div {
@@ -128,21 +137,10 @@ h2::before {
     gap: 2em;
 }
 
-.experience p span {
-    padding: 0.1em 0.3em;
-    margin-top: 3%;
-    background-color: #289bba;
-    color: #111;
-    border-radius: 3px;
-    margin-right: 0.5em;
-}
+
 
 .education p:nth-child(2) {
-    margin-block: 0.3em;
-}
-
-.experience p:nth-child(2) {
-    margin-block: 0.7em; 
+    margin-block: 0.7em;
 }
 
 .hidden {
@@ -150,7 +148,7 @@ h2::before {
 }
 
 button {
-    background-color: #289bba;
+    background-color: #ba286a;
     color: #fff;
     padding: 17px 24px;
     font-size: 17px;
@@ -158,8 +156,8 @@ button {
 }
 
 svg {
-    stroke: #289bba;
-    stroke-width: 10;
+    stroke: #ba286a;
+    stroke-width: 7;
     fill: none;
 }
 
@@ -167,6 +165,7 @@ svg {
     stroke-dasharray: 314; 
     transition: stroke-dashoffset 0.3s;
 }
+
 
 .circle {
     position: relative;
@@ -210,11 +209,6 @@ svg {
     .details {
         grid-template-columns: 1fr;
     }
-
-    .education > div {
-        grid-template-columns: 1fr;
-    }
-
     .title {
         flex-direction: column;
         align-items: flex-start;
